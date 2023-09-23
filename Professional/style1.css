@@ -1,0 +1,1299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,500;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+
+
+}
+    
+:root{
+    --bg-color:#fff;
+    --text-color:#221314;
+    --second-color:#5a7184;
+    --main-color:#6e54fa;
+    --big-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--bg-color);
+    
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 50px;
+    transition: ease .40s ;
+}
+
+.logo{
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    text-transform: uppercase;
+}
+/* قوم بإظهار القائمة الفرعية تحت عنصر "Projects" */
+.dropdown-menu {
+    color: #000000;
+    position: absolute;
+    display: none;
+    left: 73%;
+    top: 70%;
+    border-radius: 35px;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* تعديل العرض والرؤية عند تحت العنصر "Projects" */
+.dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* استخدم متغير التأخير (transition-delay) لضبط وقت الانتقال عند الظهور */
+.dropdown-menu.show {
+    transition-delay: 2s;
+}
+.dropdown-menu ul li a {
+    color: #ffb806;
+    font-weight: 900;
+}
+/* استهداف العناصر داخل القائمة الفرعية */
+.dropdown-menu ul {
+    list-style: none;
+    padding: 1;
+
+}
+
+.dropdown-menu ul li {
+    padding: 10px;
+    text-align: left;
+    width: 150px;
+}
+
+/* تغيير شكل السهم عند الفتح */
+.dropdown a i {
+    transform: rotate(180deg);
+    
+}
+
+/* استخدام hover لعرض القائمة الفرعية */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+
+
+.navbar{
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
+    
+}
+
+.navbar a {
+    flex-direction: flex-end;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 2px;
+    transition: ease .40s;
+    text-transform: uppercase;
+}
+.navbar a:hover {
+    background: var(--bg-color);
+    color:var(--main-color);
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 80px;
+}
+
+.user-pic{
+    justify-content: flex-start;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 15px;
+    
+}
+.sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 50px;
+    width: 290px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu{
+    max-height: 600px;
+}
+
+.sub-menu{
+    background: #fff;
+    padding: 15px;
+    margin: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+.user-info h1 {
+    color: #000;
+    font-size: 22px; 
+    margin-left: 10px;
+}
+.user-info img {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.sub-menu hr {
+    border: 0;
+    height: 2.5px;
+    width: 100%;
+    background: #0f0a0a;
+    margin: 15px 0 10px;
+    
+}
+.sub-menu a {
+    color: #0b0404;
+    font-size: 1.7em;
+    padding-right: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+    justify-content: space-between; /* تحكم في المسافة بين الرمز والنص */
+}
+
+.sub-menu-link i {
+    margin-right: 10px;
+}
+
+.sub-menu-name {
+    margin: 0; /* تحديث الهامش لتوسيط النص */
+    text-align: right; /* يجعل النص يبدأ من اليمين */
+    flex-grow: 1; /* يأخذ المساحة المتبقية */
+    font-size: 35px;
+}
+.sub-menu-name:hover{
+    font-weight:600 ;
+}
+
+.sub-menu-arrow {
+    color: #ffb806;
+    font-size: 30px;
+    transition: transform 0.5s;
+}
+
+
+.sub-menu-link:hover .sub-menu-arrow {
+    transform: translateX(5px);
+    font-weight:600 ;
+
+}
+
+
+
+
+section{
+    padding: 80px 18%;
+}
+
+.Home{
+    padding-left: 3%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("images1/1.jpg");
+    background-size: cover;  
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+
+.Home-text h1{
+    font-size: 45px;
+    line-height: 1.9;
+    color: var(--bg-color);
+    font-family: 'paytone One', sans-serif;
+    letter-spacing: 5px;
+    margin-bottom:10px;
+}
+
+.Home-text p {
+    color: var(--bg-color);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 38px;
+    margin-bottom: 50px;
+    
+}
+
+.Home-btn{
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 30px;
+    background: #ffffffbf ;
+    color: var(--main-color);
+    border-radius: 80px;
+    transition: ease .40s;
+}
+.Home-btn:hover{
+    background: var(--bg-color);
+    transform: scale(1.1);
+}
+
+.services {
+    background-color: #788585;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 50px;
+    text-align: center;
+    align-items: center;
+}
+.title1 {
+    display: flex;
+    justify-content: center;
+    color: #15375a;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 100px;
+    margin-top: 80px;
+    text-align: center;
+    align-items: center; 
+}
+.title1  i {
+    margin-left: 10px; 
+}
+
+.content  {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.services .content {
+    margin-top: 10px;
+}
+
+.services-card {
+    background-color: var(--second-color) ;
+    border-bottom:  20px solid #c8afd4a1;
+    box-shadow: 0 5px 25px  rgba(1 1 1 /100% );
+    min-height: 20em;
+    width: 20em;
+    overflow: hidden;
+    border-radius: 40px;
+    margin: 15px;
+    transition:  0.9s ;
+}
+
+.content :hover {
+    transform: scale(1.09);
+    transition: 0.7s ;
+    font-weight: 900;
+}
+
+
+
+
+.services-image img {
+    width: 100%;
+}
+
+.services-info{
+    padding:2em;
+}
+
+.services-category {
+    font-size: 2em;
+    color: black;
+    font-weight: 400;
+    
+    
+}
+
+
+.projects{
+    background-color: #c8afd4a1;
+}
+.packag-contant{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px,auto));
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 5rem;
+    
+}
+
+
+.thum{
+    position: relative;
+    transition: all .3s cubic-bezier(cubic-bezier(.445, .05, .55, .95));
+    will-change: filter;
+    cursor: pointer;
+    transition: all 0.7s ;
+}
+.thum img:hover {
+    filter: brightness(100%) hue-rotate(45deg);
+    transform: scale(1.04);
+}
+.thum img{
+    width: 100%;
+    height: 500%;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 10px 5px 6px rgb(120, 155, 219);
+    transition: all 0.7s ;
+
+}
+.dest-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.location h4{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: var(--second-color);
+}
+
+.contact{
+    background-color:#808080;
+}
+
+.title2  {
+    position: relative;
+    color: #edeeef;
+    font-size: 31px;
+    margin-bottom: 30px;
+
+}
+
+.title2::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 200px;
+    left: 0;
+    bottom: -10px;
+    background: #ffffff;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.3rem;
+    --stroke: #666;
+    --fill: #ffc73a;
+}
+
+.rating input {
+    appearance: unset;
+}
+
+.rating label {
+    cursor: pointer;
+}
+
+.rating svg {
+    width: 2rem;
+    height: 2rem;
+    overflow: visible;
+    fill: transparent;
+    stroke: var(--stroke);
+    stroke-linejoin: bevel;
+    stroke-dasharray: 12;
+    animation: idle 4s linear infinite;
+    transition: stroke 0.2s, fill 0.5s;
+}
+
+@keyframes idle {
+    from {
+    stroke-dashoffset: 24;
+    }
+}
+
+.rating label:hover svg {
+    stroke: var(--fill);
+}
+
+.rating input:checked ~ label svg {
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+}
+
+@keyframes yippee {
+    0% {
+    transform: scale(1);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+}
+
+30% {
+    transform: scale(0);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+}
+
+30.1% {
+stroke: var(--fill);
+stroke-dasharray: 0;
+stroke-linejoin: miter;
+stroke-width: 8px;
+}
+
+60% {
+transform: scale(1.2);
+fill: var(--fill);
+}
+}
+
+
+.footer {
+    background-color: #040709;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-title {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.social-icons a {
+    color: #ffb806;
+    font-size: 1.4em;
+    padding-right: 20px;
+
+}
+
+.footer1{
+    padding: 20px 0 ;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.list{
+    width: 50%;
+}
+.list ul li {
+    margin-bottom: 15px; /* يمكنك تعديل قيمة المسافة حسب احتياجاتك */
+}
+
+.list ul li a {
+    color: #000000;
+    font-size: var(--p-font);
+    display: block;
+    transition: .3s;
+}
+.list ul li a:hover {
+    color: var(--bg-color);
+    transform: translateX(14px);
+}
+.list .social a{
+    height: 40px;
+    width: 40px;
+    background: #111111;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border-radius: 15px;
+    transition: .3s;
+    margin-right: 10px;
+}
+.list .social a:hover{
+    transform: scale(1.5);
+}
+.title2 ul li a {
+    display: flex;
+    align-items: center;
+    
+}
+
+.list ul li a {
+    font-size: 20px;
+    font-weight: 600;
+}
+.list ul li  :hover {
+    font-weight: 900;
+}
+
+ul li a i {
+    margin-left: 10px; 
+}
+
+
+
+.videos-container {
+    
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.videos {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.video {
+    flex: 1;
+    text-align: center;
+}
+
+.video video {
+    background-color: rgb(120, 155, 219);
+    height: auto;
+    transition: transform 0.5s, border-radius 0.6s;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgb(120, 155, 219);
+
+}
+
+.video:hover .video-bg {
+    transform: scale(1.3);
+    border-radius: 35px;
+    transition: all 0.7s ;
+    
+}
+
+
+
+.voices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.voice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px;
+    padding: 5px;
+    background-color: #000000;
+    border-radius: 15px;
+    transition: transform 0.5s, border-radius 0.6s;
+    box-shadow: 5px 5px 5px rgb(120, 155, 219);
+    
+}
+
+.voice:hover {
+    transform: scale(1.3);
+    border-radius: 35px;
+}
+
+
+/* أنماط الشاشات الكبيرة */
+@media (max-width: 1199px) {
+    body {
+        font-size: 18px;
+    }
+    header {
+        padding: 25px;
+    }
+    .Home-text h1{
+        font-size: 35px;
+
+    }
+    .dropdown-menu {
+        left: 66%;
+        top: 55%;
+    }
+    /* أضف أكواد CSS إضافية للشاشات الكبيرة هنا */
+}
+/* أنماط الشاشات الكبيرة */
+@media (max-width: 1055px) {
+    .videos  {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 30px; 
+        
+    }
+    .voices  {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+        .dropdown-menu {
+        left: 63%;
+        top: 55%;
+    }
+
+
+}
+@media (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+    header {
+        padding: 12px 20px;
+    }
+
+    section{
+        padding: 40px 10%;
+    }
+    .dropdown-menu {
+        left: 63%;
+        top: 55%;
+    }
+
+
+}
+
+
+
+/* أنماط الشاشات المتوسطة */
+@media (max-width: 998px) {
+    body {
+        font-size: 16px;
+    }
+    header {
+        padding: 20px;
+    }
+    .dropdown-menu {
+        left: 60%;
+        top: 55%;
+    }
+    /* أضف أكواد CSS إضافية للشاشات المتوسطة هنا */
+}
+@media (max-width:951px) {
+    .logo{
+        font-size: 31px;
+    }
+    .navbar a {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .dropdown-menu {
+        left: 66%;
+        top: 55%;
+    }
+}
+
+@media (max-width: 880px) {
+    .logo{
+        font-size: 35px;
+    }
+    .navbar a {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .dropdown-menu {
+        left: 66%;
+        top: 55%;
+    }
+
+    .footer1 {
+        padding: 20px 0; /* تباعد العناصر في القسم السفلي */
+    }
+
+    .main {
+        flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+    }
+
+    .list {
+        width: 100%; /* عرض العناصر في القائمة */ 
+    }
+
+    .social a i, .list ul li a i {
+        font-size: 18px; /* حجم الرموز (أيقونات) */
+    }
+
+    .social a {
+        margin-right: 10px; /* تباعد الرموز (أيقونات) الاجتماعية */
+    }
+
+    ul {
+        margin-top: 5px; /* تباعد العناصر في القوائم غير المرقمة */
+    }
+
+    .footer1 hr {
+        margin: 10px 0; /* تباعد الخطوط الأفقية */
+    }
+
+    .footer1 ul li a {
+        font-size: 18px; /* حجم نص الروابط */
+    }
+
+    .list .social a {
+        height: 30px;
+        width: 30px; /* حجم الرموز (أيقونات) الاجتماعية */
+    }
+}
+@media (max-width: 830px) {
+
+    .dropdown-menu {
+        left: 63%;
+        top: 55%;
+    }
+}
+
+/* أنماط الشاشات الصغيرة */
+@media (max-width: 810px) {
+    body {
+        font-size: 14px;
+    }
+    header {
+        padding: 15px;
+    }
+    .dropdown-menu {
+        left: 63%;
+        top: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo{
+        font-size: 28px;
+        }
+        header {
+            padding: 10px;
+        }
+    
+        .navbar a {
+            font-size: 14px;
+            padding: 8px 15px;
+        }
+    
+        .user-pic {
+            width: 20px;
+        }
+    
+        .sub-menu-wrap {
+            top: 40px; /* زيادة المسافة بين الصورة والقائمة الفرعية */
+        }
+        .dropdown-menu {
+            left: 67%;
+            top: 55%;
+        }
+        .sub-menu img {
+            width: 30vw; /* تصغير عرض الصورة بناءً على عرض الشاشة */
+            max-width: 100%;
+        }
+    
+        .sub-menu h1 {
+            font-size: 3vw; /* تصغير حجم العنوان بناءً على عرض الشاشة */
+            margin: 10px 0;
+        }
+    
+        .sub-menu-link i {
+            font-size: 6vw; /* تصغير حجم الرموز بناءً على عرض الشاشة */
+            margin-bottom: 5px;
+        }
+    
+        .sub-menu-name {
+            font-size: 0.8em;
+            margin: 5px 0;
+        }
+    
+        .sub-menu-arrow {
+            font-size: 3vw; /* تصغير حجم رمز السهم بناءً على عرض الشاشة */
+        }
+}
+@media (max-width: 715px) {
+    .dropdown-menu {
+        left: 64%;
+        top: 55%;
+    }
+
+}
+@media (max-width: 680px) {
+    .dropdown-menu {
+        left: 62%;
+        top: 55%;
+    }
+    .sub-menu img {
+        width: 25vw; /* تصغير عرض الصورة بناءً على عرض الشاشة */
+        max-width: 100%;
+    }
+
+    .sub-menu h1 {
+        font-size: 3vw; /* تصغير حجم العنوان بناءً على عرض الشاشة */
+        margin: 10px 0;
+    }
+
+    .sub-menu-link i {
+        font-size: 5vw; /* تصغير حجم الرموز بناءً على عرض الشاشة */
+        margin-bottom: 5px;
+    }
+
+    .sub-menu-name {
+        font-size: 2.5vw; /* تصغير حجم نص العنوان بناءً على عرض الشاشة */
+    }
+
+    .sub-menu-arrow {
+        font-size: 3vw; /* تصغير حجم رمز السهم بناءً على عرض الشاشة */
+    }
+    .sub-menu{
+        padding: 20px;
+        margin: 25px;
+    }
+}
+
+@media (max-width: 670px) {
+    .logo{
+        font-size: 20px;
+    }
+    .user-info h1 {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 625px) {
+    
+
+
+    .footer1 {
+        padding: 20px 0; /* تباعد العناصر في القسم السفلي */
+    }
+
+    .main {
+        flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+    }
+
+    .list {
+        width: 100%; /* عرض العناصر في القائمة */
+    }
+
+    .social a i, .list ul li a i {
+        font-size: 16px; /* حجم الرموز (أيقونات) */
+    }
+
+    .social a {
+        margin-right: 10px; /* تباعد الرموز (أيقونات) الاجتماعية */
+    }
+
+    ul {
+        margin-top: 5px; /* تباعد العناصر في القوائم غير المرقمة */
+    }
+
+    .footer1 hr {
+        margin: 10px 0; /* تباعد الخطوط الأفقية */
+    }
+
+    .footer1 ul li a {
+        font-size: 16px; /* حجم نص الروابط */
+    }
+
+    .list .social a {
+        height: 30px;
+        width: 30px; /* حجم الرموز (أيقونات) الاجتماعية */
+    }
+    .sub-menu a {
+        color: #0b0404;
+        font-size: 1.7em;
+        margin: 12px 0;
+    }
+    .sub-menu-name {
+        font-size: 0.9em;
+        margin: 5px 0;
+    }
+    .sub-menu-arrow{
+    font-size: 30px;
+    }
+    .sub-menu-link i {
+        font-size:  40px;
+    }
+}
+
+
+/* أنماط الشاشات الصغيرة جدًا */
+@media (max-width: 613px) {
+    .logo{
+        font-size: 15px;
+    }
+    
+}
+@media (max-width: 575px) {
+    .logo{
+        font-size: 15px;
+    }
+    .navbar a {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+}
+@media (max-width: 600px) {
+    .dropdown-menu {
+        left: 57%;
+        top: 55%;
+    }
+    .sub-menu-name {
+        font-size: 0.8em;
+        margin: 5px 0;
+    }
+}
+@media (max-width: 561px) {
+    .dropdown-menu {
+        left: 59%;
+        top: 55%;
+    }
+    .sub-menu-name {
+        font-size: 0.8em;
+        margin: 5px 0;
+    }
+}
+/* أنماط الشاشات الصغيرة جدًا */
+@media (max-width: 535px) {
+    .logo{
+        font-size: 12px;
+    }
+    .navbar a {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .sub-menu-name {
+        font-size: 0.8em;
+        margin: 5px 0;
+    }
+    .user-info h1 {
+        font-size: 19px;
+    }
+
+
+}
+@media (max-width: 551px) {
+    .videos-container .videos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .videos-container .video {
+        flex: 0 0 calc(50% - 10px);
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .videos-container .video:last-child {
+        margin-right: 0;
+    }
+    
+    .videos-container .video-bg {
+        width: 100%;
+        height: auto;
+    }
+    
+
+    .footer-title {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    .social-icons a {
+        font-size: 1.4em;
+        padding-right: 20px;
+
+    }
+}
+/* تنسيق العناصر في القسم "Projects" */
+@media (max-width: 470px) {
+    .projects .box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* تنسيق العناصر في القسم "My Videos" */
+@media (max-width: 470px) {
+    .videos-container .videos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .videos-container .video {
+        flex: 0 0 calc(50% - 10px);
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .videos-container .video:last-child {
+        margin-right: 0;
+    }
+    
+    .videos-container .video-bg {
+        width: 100%;
+        height: auto;
+    }
+    .social-icons a {
+        color: #ffb806;
+        font-size: 1.2em;
+        padding-right: 20px;
+    
+    }
+    .title1{
+        font-size: 1.8em;
+    }
+}
+@media (max-width: 465px) {
+
+.footer-title {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.social-icons a {
+    font-size: 1.1em;
+    padding-right: 20px;
+    }
+}
+@media (max-width: 460px) {
+    .dropdown-menu {
+        left: 56%;
+        top: 55%;
+    }
+}
+
+@media (max-width: 435px) {
+    .Home-text h1{
+        font-size: 25px;
+    }
+    .logo{
+        font-size: 12px;
+    }
+    .navbar a {
+        font-size: 11px;
+        padding: 5px;
+    }
+    .packag-contant{
+        grid-template-columns: repeat(auto-fit, minmax(240px,auto));
+    }
+    
+    .voices {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-menu-name {
+        font-size: 0.9em;
+        margin: 5px 0;
+    }
+    .sub-menu-arrow{
+    font-size: 30px;
+    }
+    .sub-menu-link i {
+        font-size:  40px;
+    }
+
+    .voice {
+        margin: 20px; /* تصغير المسافات بين العناصر */
+        padding: 3px; /* تصغير الحواف */
+        border-radius: 10px; /* تصغير زوايا العناصر */
+        box-shadow: 3px 3px 3px rgb(120, 155, 219); /* تصغير الظلال */
+    }
+
+    .voice:hover {
+        transform: scale(1); /* لإلغاء التصغير عند التحويم */
+        border-radius: 10px; /* الزوايا في حالة التحويم */
+        box-shadow: 3px 3px 3px rgb(120, 155, 219); /* الظلال في حالة التحويم */
+    }
+
+        .footer-title {
+            font-size: 1em;
+            font-weight: 500;
+        }
+        
+        .social-icons a {
+            font-size: 1em;
+            padding-right: 20px;
+            }
+        
+}
+@media (max-width: 410px) {
+
+    .navbar a {
+        font-size: 9px;
+        padding: 5px;
+    }
+}
+/* تكبير الصور في القسم "Projects" على شاشة عرض 380 بكسل وأصغر */
+@media (max-width: 386px) {
+    .packag-contant{
+        grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+    }
+    .navbar a {
+        font-size: 9px;
+        padding: 5px;
+    }
+    .dropdown-menu {
+        left: 56%;
+        top: 55%;
+    }
+}
+
+    @media (max-width: 380px) {
+        .footer1 {
+            padding: 10px 0; /* تقليل التباعد في القسم السفلي */
+        }
+    
+        .main {
+            flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+        }
+    
+        .list {
+            width: auto; /* العرض التلقائي للقائمة */
+        }
+    
+        .social a i,
+        .list ul li a i {
+            font-size: 12px; /* تصغير حجم الرموز (أيقونات) */
+        }
+    
+        .social a {
+            margin-right: 5px; /* تقليل التباعد بين رموز الشبكات الاجتماعية */
+        }
+    
+        ul {
+            margin-top: 3px; /* تقليل التباعد بين عناصر القوائم غير المرقمة */
+        }
+    
+        .footer1 hr {
+            margin: 5px 0; /* تقليل التباعد بين الخطوط الأفقية */
+        }
+    
+        .footer1 ul li a {
+            font-size: 12px; /* تصغير حجم نص الروابط */
+        }
+    
+        .list .social a {
+            height: 20px;
+            width: 20px; /* تصغير حجم رموز الشبكات الاجتماعية */
+        }
+        .footer-title {
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+        
+        .social-icons a {
+            font-size: 0.8em;
+            padding-right: 20px;
+            }
+        
+    
+}
+
+@media (max-width: 361px) {
+    .logo{
+        font-size: 9px;
+    }
+    .navbar a {
+        font-size: 8px;
+        padding: 5px;
+    }
+
+}
+@media (max-width: 351px) {
+    .logo{
+        font-size: 8px;
+    }
+    .navbar a {
+        font-size: 7px;
+        padding: 5px;
+    }
+
+}
+
+@media (max-width: 321px) {
+    .logo{
+        font-size: 8px;
+    }
+    .navbar a {
+        font-size: 7px;
+        padding: 5px;
+    }
+}
+@media (max-width: 315px) {
+
+.footer-title {
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.social-icons a {
+    font-size: 0.7em;
+    padding-right: 10px;
+    }
+}
+
+@media (max-width: 281px) {
+    .logo{
+        font-size: 7px;
+    }
+    .navbar a {
+        font-size: 6px;
+        padding: 4px;
+    }
+}
